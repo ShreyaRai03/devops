@@ -1,0 +1,20 @@
+pipeline{
+ agent any
+  stages{
+    stage('checkout'){
+     steps{
+       git branch : 'main',url:'https://github.com/ShreyaRai03/devoppp.git'
+}
+}
+stage{'hello'){
+  steps{
+rcho "hello from jenkins pipeline"
+ }
+}
+stage('goodbye'){
+ steps{
+echo "pipeline finished sucessfully"
+}
+}
+}
+}
